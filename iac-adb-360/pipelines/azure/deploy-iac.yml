@@ -15,9 +15,9 @@ pr:
 
 variables:
   - ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/dev') }}: 
-    - template: ./configdev.yml
+    - template: configdev.yml
   - ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/main') }}: 
-    - template: ./configprd.yml
+    - template: configprd.yml
 
 
 pool:
